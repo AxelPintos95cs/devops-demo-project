@@ -1,4 +1,5 @@
-from flask import Flask, request
+from flask import Flask, request, Response
+from prometheus_client import Counter, generate_latest
 import os
 import psycopg2
 
@@ -110,3 +111,12 @@ def create_user():
     except Exception as e:
         return {"error": str(e)}, 500
 
+REQUEST_COUNT = Counter("flask_app_requests_total", "Total requests to the app")
+
+@app.before_request
+def before_request():
+    REQUEST_COUNT.inc()
+
+@app.route("/metrics")
+def metrics():
+    return Response(generate_latest(), mimetype="text/plain")

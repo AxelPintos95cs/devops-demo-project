@@ -12,6 +12,8 @@ services:
       - DB_PASS=${POSTGRES_PASSWORD}
     depends_on:
       - db
+    networks:
+      - monitoring
 
   db:
     image: postgres:15
@@ -21,6 +23,28 @@ services:
       - POSTGRES_DB=${POSTGRES_DB}
     volumes:
       - pgdata:/var/lib/postgresql/data
+    networks:
+      - monitoring
+
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+    networks:
+      - monitoring
+
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    networks:
+      - monitoring
 
 volumes:
   pgdata:
+
+networks:
+  monitoring:
+
