@@ -22,6 +22,7 @@ Este proyecto demuestra una API en Flask conectada a una base de datos PostgreSQ
 ```bash
 git clone https://github.com/tu-usuario/flask-monitoring-app.git
 cd flask-monitoring-app
+```
 
 ### 2. Configurar Grafana 
 
