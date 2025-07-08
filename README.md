@@ -1,5 +1,12 @@
 # Flask API + PostgreSQL + Monitoring con Prometheus & Grafana
 
+# Flask API + PostgreSQL + Monitoring con Prometheus & Grafana
+
+![CI/CD](https://github.com/AxelPintos95cs/devops-demo-project/actions/workflows/ci-cd.yml/badge.svg)
+[![Deploy on Fly.io](https://img.shields.io/badge/Deploy-Fly.io-0884FF?logo=flydotio&logoColor=white&style=flat-square)](https://devops-demo-project.fly.dev)
+
+---
+
 Este proyecto demuestra una API en Flask conectada a una base de datos PostgreSQL y monitoreada con Prometheus y Grafana. Todo está contenido en Docker y puede correr localmente o adaptarse fácilmente a producción (AWS, ECS, etc).
 
 ---
