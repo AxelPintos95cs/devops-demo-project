@@ -26,32 +26,34 @@ cd flask-monitoring-app
 
 ### 2. Configurar Grafana 
 
-Iniciar sesión en Grafana (http://localhost:3000)
+- Iniciar sesión en Grafana (http://localhost:3000)
 
-Ir a Settings > Data Sources > Add data source
+- Ir a Settings > Data Sources > Add data source
 
-Elegir Prometheus
+- Elegir Prometheus
 
-Usar esta URL: http://prometheus:9090
+- Usar esta URL: http://prometheus:9090
 
-Guardar y continuar
+- Guardar y continuar
 
-Crear un nuevo Dashboard con la métrica:
+- Crear un nuevo Dashboard con la métrica:
+```
 flask_app_requests_total
+```
 
 ### Despliegue AWS (Opcional)
 
-Crear una instancia EC2 o usar ECS/Fargate
+- Crear una instancia EC2 o usar ECS/Fargate
 
-Instalar Docker + Docker Compose en el host
+- Instalar Docker + Docker Compose en el host
 
-Subir este repo al servidor (vía Git o SCP)
+- Subir este repo al servidor (vía Git o SCP)
 
-Actualizar .env con valores seguros
+- Actualizar .env con valores seguros
 
-Asegurar que puertos 5000, 9090 y 3000 estén abiertos (en Security Groups)
+- Asegurar que puertos 5000, 9090 y 3000 estén abiertos (en Security Groups)
 
-Ejecutar docker-compose up -d para dejarlo corriendo en segundo plano
+- Ejecutar docker-compose up -d para dejarlo corriendo en segundo plano
 
 ## Endpoints Disponibles
 
@@ -64,8 +66,8 @@ Ejecutar docker-compose up -d para dejarlo corriendo en segundo plano
 | `/metrics`   | GET    | Exposición de métricas para Prometheus |
 
 
-## 🧠 Autor
-- Axel Pintos
+## Autor
+- 🧠 Axel Pintos
 - 💼 SysAdmin Jr. | Python | DevOps en formación
 - 🌍 Buscando oportunidades remotas
 
