@@ -65,7 +65,7 @@ Ejecutar docker-compose up -d para dejarlo corriendo en segundo plano
 
 
 ## 🧠 Autor
-Axel Pintos
-💼 SysAdmin Jr. | Python | DevOps en formación
-🌍 Buscando oportunidades remotas
+- Axel Pintos
+- 💼 SysAdmin Jr. | Python | DevOps en formación
+- 🌍 Buscando oportunidades remotas
 
